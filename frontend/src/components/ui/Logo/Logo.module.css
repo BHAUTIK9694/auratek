@@ -1,0 +1,18 @@
+/* ============================================
+   Logo Component
+   ============================================ */
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+}
+
+.horizontal {
+  flex-direction: row;
+}
+
+.icon {
+  display: block;
+  height: auto;
+  width: auto;
+}

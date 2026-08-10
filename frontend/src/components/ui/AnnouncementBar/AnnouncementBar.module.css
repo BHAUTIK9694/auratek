@@ -1,0 +1,100 @@
+/* ============================================
+   Announcement Bar
+   ============================================ */
+
+.bar {
+  position: relative;
+  background: linear-gradient(90deg, #101010 0%, #1A1A1A 50%, #101010 100%);
+  color: var(--text-on-dark);
+  height: var(--announcement-height);
+  overflow: hidden;
+  border-bottom: 1px solid rgba(201, 169, 110, 0.18);
+}
+
+.bar::before,
+.bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.bar::before {
+  left: 0;
+  background: linear-gradient(90deg, #101010 0%, rgba(16,16,16,0) 100%);
+}
+
+.bar::after {
+  right: 0;
+  background: linear-gradient(-90deg, #101010 0%, rgba(16,16,16,0) 100%);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  height: 100%;
+  max-width: var(--container-2xl);
+  margin-inline: auto;
+  padding-inline: var(--section-padding-x);
+}
+
+.ornament {
+  width: 5px;
+  height: 5px;
+  background: var(--color-brand-primary);
+  transform: rotate(45deg);
+  opacity: 0.85;
+  flex: none;
+}
+
+.track {
+  position: relative;
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+  max-width: 720px;
+}
+
+.message {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  opacity: 0;
+  transform: translateY(100%);
+  transition:
+    opacity var(--transition-luxury),
+    transform var(--transition-luxury);
+  padding-inline: var(--space-6);
+}
+
+.message.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 640px) {
+  .bar {
+    height: 36px;
+  }
+  .message {
+    font-size: 0.68rem;
+    letter-spacing: var(--tracking-wider);
+  }
+  .bar::before,
+  .bar::after {
+    width: 40px;
+  }
+}

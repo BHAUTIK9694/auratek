@@ -1,0 +1,70 @@
+/* ============================================
+   Marquee Strip
+   ============================================ */
+
+.strip {
+  width: 100%;
+  overflow: hidden;
+  padding-block: var(--space-4);
+  border-block: 1px solid transparent;
+}
+
+.strip.light {
+  background: var(--bg-primary);
+  border-color: rgba(201, 169, 110, 0.2);
+  color: var(--text-primary);
+}
+
+.strip.dark {
+  background: var(--bg-dark);
+  border-color: rgba(201, 169, 110, 0.25);
+  color: var(--text-on-dark);
+}
+
+.strip.gold {
+  background: var(--gradient-gold);
+  color: var(--color-white);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  width: max-content;
+  animation: marquee 40s linear infinite;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  flex: none;
+}
+
+.label {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.4rem, 1.2rem + 1vw, 2.2rem);
+  letter-spacing: var(--tracking-tight);
+  white-space: nowrap;
+  font-weight: var(--weight-regular);
+}
+
+.ornament {
+  width: 8px;
+  height: 8px;
+  border: 1px solid currentColor;
+  transform: rotate(45deg);
+  opacity: 0.6;
+  flex: none;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.strip:hover .track {
+  animation-play-state: paused;
+}

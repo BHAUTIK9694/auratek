@@ -1,0 +1,122 @@
+/* ============================================
+   Card Component - Premium Styling
+   ============================================ */
+
+.card {
+  position: relative;
+  background-color: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--transition-luxury);
+}
+
+/* ─── Variants ─── */
+
+.default {
+  border: var(--border-light);
+  box-shadow: var(--shadow-card);
+}
+
+.default:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-4px);
+}
+
+.elevated {
+  box-shadow: var(--shadow-lg);
+}
+
+.elevated:hover {
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-6px);
+}
+
+.glass {
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.bordered {
+  border: var(--border-subtle);
+  background-color: transparent;
+}
+
+.bordered:hover {
+  border-color: var(--color-brand-primary);
+}
+
+.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-on-dark);
+}
+
+/* ─── Padding ─── */
+
+.paddingNone { padding: 0; }
+.paddingSm { padding: var(--space-4); }
+.paddingMd { padding: var(--space-6); }
+.paddingLg { padding: var(--space-8); }
+.paddingXl { padding: var(--space-12); }
+
+/* ─── Elements ─── */
+
+.image {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  transition: transform var(--transition-luxury);
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+}
+
+.imageWrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-overlay);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+  display: flex;
+  align-items: flex-end;
+  padding: var(--space-6);
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.body {
+  padding: var(--space-6);
+}
+
+.header {
+  margin-bottom: var(--space-3);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-medium);
+  color: var(--text-heading);
+  letter-spacing: var(--tracking-wide);
+}
+
+.subtitle {
+  font-size: var(--text-sm);
+  color: var(--text-tertiary);
+  margin-top: var(--space-1);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+
+.footer {
+  padding: var(--space-4) var(--space-6);
+  border-top: var(--border-light);
+}

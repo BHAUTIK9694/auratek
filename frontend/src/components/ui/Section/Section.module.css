@@ -1,0 +1,64 @@
+/* ============================================
+   Section Component - Enhanced Visual Design
+   ============================================ */
+
+.section {
+  padding-block: var(--section-padding-y);
+  position: relative;
+}
+
+/* ─── Background Variants ─── */
+
+.bgDefault {
+  background-color: var(--bg-primary);
+  background-image: 
+    radial-gradient(ellipse at 20% 50%, rgba(201, 169, 110, 0.03) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 50%, rgba(201, 169, 110, 0.02) 0%, transparent 50%);
+}
+
+.bgAlt {
+  background-color: var(--bg-secondary);
+  background-image: 
+    radial-gradient(ellipse at 50% 0%, rgba(201, 169, 110, 0.04) 0%, transparent 60%);
+}
+
+.bgCream {
+  background-color: var(--bg-tertiary);
+  background-image: 
+    linear-gradient(135deg, rgba(201, 169, 110, 0.04) 0%, transparent 50%, rgba(201, 169, 110, 0.02) 100%);
+}
+
+.bgDark {
+  background-color: var(--bg-dark);
+  background-image: 
+    radial-gradient(ellipse at 30% 50%, rgba(201, 169, 110, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 80%, rgba(201, 169, 110, 0.04) 0%, transparent 40%);
+  color: var(--text-on-dark);
+}
+
+.bgDark h1,
+.bgDark h2,
+.bgDark h3,
+.bgDark h4,
+.bgDark h5,
+.bgDark h6 {
+  color: var(--text-on-dark);
+}
+
+.bgDark p {
+  color: var(--text-on-dark-muted);
+}
+
+/* ─── Padding Variants ─── */
+
+.paddingSm {
+  padding-block: var(--space-12);
+}
+
+.paddingLg {
+  padding-block: calc(var(--section-padding-y) * 1.5);
+}
+
+.paddingNone {
+  padding-block: 0;
+}

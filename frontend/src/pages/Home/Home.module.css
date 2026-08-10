@@ -1,0 +1,31 @@
+/* ============================================
+   Home Page — outer composition
+   ============================================ */
+
+.newsletterBlock {
+  padding-block: var(--section-padding-y);
+  background:
+    radial-gradient(ellipse at 50% 20%, rgba(201, 169, 110, 0.08) 0%, transparent 55%),
+    var(--color-cream);
+  position: relative;
+}
+
+.newsletterBlock::before,
+.newsletterBlock::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(60%, 500px);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201, 169, 110, 0.5), transparent);
+}
+
+.newsletterBlock::before { top: 0; }
+.newsletterBlock::after { bottom: 0; }
+
+.newsletterInner {
+  max-width: 720px;
+  margin-inline: auto;
+  padding-inline: var(--section-padding-x);
+}

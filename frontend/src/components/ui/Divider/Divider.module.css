@@ -1,0 +1,39 @@
+/* ============================================
+   Divider Component
+   ============================================ */
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background-color: var(--color-grey-200);
+}
+
+.gold .line {
+  background: var(--gradient-gold);
+  height: 1px;
+}
+
+.ornament {
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--color-brand-primary);
+  transform: rotate(45deg);
+}
+
+.dot {
+  width: 4px;
+  height: 4px;
+  background-color: var(--color-brand-primary);
+  border-radius: var(--radius-full);
+}
+
+.spacingSm { margin-block: var(--space-4); }
+.spacingMd { margin-block: var(--space-8); }
+.spacingLg { margin-block: var(--space-12); }
+.spacingXl { margin-block: var(--space-16); }

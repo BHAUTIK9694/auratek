@@ -1,0 +1,17 @@
+/* ============================================
+   Container Component
+   ============================================ */
+
+.container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: var(--section-padding-x);
+}
+
+.xs { max-width: var(--container-xs); }
+.sm { max-width: var(--container-sm); }
+.md { max-width: var(--container-md); }
+.lg { max-width: var(--container-lg); }
+.xl { max-width: var(--container-xl); }
+.xxl { max-width: var(--container-2xl); }
+.full { max-width: var(--container-max); }

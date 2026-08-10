@@ -1,0 +1,246 @@
+/* ============================================
+   Product Card - Premium jewellery tile
+   ============================================ */
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  isolation: isolate;
+}
+
+.mediaWrap {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-cream);
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-md);
+}
+
+.mediaWrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(0,0,0,0.08) 100%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--transition-luxury);
+}
+
+.card:hover .mediaWrap::after {
+  opacity: 1;
+}
+
+.image {
+  position: absolute;
+  inset: 0;
+}
+
+.imgPrimary,
+.imgSecondary {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition:
+    opacity var(--transition-luxury),
+    transform 1200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.imgSecondary {
+  opacity: 0;
+}
+
+.card:hover .imgPrimary {
+  transform: scale(1.06);
+  opacity: 0;
+}
+
+.card:hover .imgSecondary {
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+/* If no secondary image, primary keeps zoom without fade */
+.mediaWrap:not(:has(.imgSecondary)) .imgPrimary,
+.card:hover .imgPrimary:only-child {
+  opacity: 1 !important;
+}
+
+/* Badge */
+.badge {
+  position: absolute;
+  top: var(--space-4);
+  left: var(--space-4);
+  z-index: 2;
+  padding: 6px 12px;
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-luxury);
+  text-transform: uppercase;
+  color: var(--color-white);
+  background: var(--color-brand-secondary);
+  border-radius: var(--radius-full);
+  backdrop-filter: blur(6px);
+}
+
+.badge.new {
+  background: var(--color-brand-primary);
+}
+
+.badge.bestseller {
+  background: var(--color-brand-secondary);
+}
+
+.badge.limited {
+  background: var(--color-brand-accent);
+}
+
+/* Wishlist button */
+.saveBtn {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  z-index: 2;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-brand-secondary);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border-radius: var(--radius-full);
+  transition:
+    color var(--transition-base),
+    background var(--transition-base),
+    transform var(--transition-base);
+  opacity: 0;
+  transform: translateY(-6px);
+}
+
+.card:hover .saveBtn,
+.saveBtn:focus-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.saveBtn:hover {
+  background: var(--color-white);
+  color: var(--color-brand-primary);
+}
+
+.savedActive {
+  color: var(--color-brand-primary) !important;
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Quick view CTA */
+.quickView {
+  position: absolute;
+  left: 50%;
+  bottom: var(--space-4);
+  transform: translate(-50%, 120%);
+  z-index: 2;
+  padding: 12px 26px;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-brand-secondary);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-full);
+  transition:
+    transform var(--transition-luxury),
+    background var(--transition-base),
+    color var(--transition-base);
+  white-space: nowrap;
+}
+
+.card:hover .quickView {
+  transform: translate(-50%, 0);
+}
+
+.quickView:hover {
+  background: var(--color-brand-primary);
+  color: var(--color-white);
+}
+
+/* Body */
+.body {
+  padding: var(--space-5) var(--space-2);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.category {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-luxury);
+  text-transform: uppercase;
+  color: var(--color-brand-primary);
+  margin: 0;
+}
+
+.name {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-wide);
+  color: var(--text-heading);
+  line-height: var(--leading-snug);
+  margin: 0;
+}
+
+.tones {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-1);
+}
+
+.tone {
+  width: 14px;
+  height: 14px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(0,0,0,0.12);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  cursor: pointer;
+}
+
+.tone:hover {
+  transform: scale(1.15);
+}
+
+.toneActive {
+  box-shadow: 0 0 0 2px var(--color-off-white), 0 0 0 3px var(--color-brand-primary);
+}
+
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  margin-top: var(--space-1);
+}
+
+.price {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--weight-medium);
+  color: var(--text-heading);
+  letter-spacing: var(--tracking-wide);
+}
+
+.originalPrice {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--text-tertiary);
+  text-decoration: line-through;
+}
