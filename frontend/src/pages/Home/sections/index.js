@@ -1,5 +1,10 @@
 export { default as HeroSection } from './HeroSection';
+export { default as FeaturedSpotlight } from './FeaturedSpotlight';
 export { default as CategoryGrid } from './CategoryGrid';
+export { default as ShopByOccasion } from './ShopByOccasion';
+export { default as ShopByMetal } from './ShopByMetal';
+export { default as WhyAuratek } from './WhyAuratek';
+export { default as StyleGuide } from './StyleGuide';
 export { default as NewArrivals } from './NewArrivals';
 export { default as SignatureCollection } from './SignatureCollection';
 export { default as Craftsmanship } from './Craftsmanship';

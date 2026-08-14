@@ -99,48 +99,8 @@
   background: var(--color-brand-accent);
 }
 
-/* Wishlist button */
-.saveBtn {
-  position: absolute;
-  top: var(--space-4);
-  right: var(--space-4);
-  z-index: 2;
-  width: 36px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-brand-secondary);
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(8px);
-  border-radius: var(--radius-full);
-  transition:
-    color var(--transition-base),
-    background var(--transition-base),
-    transform var(--transition-base);
-  opacity: 0;
-  transform: translateY(-6px);
-}
-
-.card:hover .saveBtn,
-.saveBtn:focus-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.saveBtn:hover {
-  background: var(--color-white);
-  color: var(--color-brand-primary);
-}
-
-.savedActive {
-  color: var(--color-brand-primary) !important;
-  opacity: 1 !important;
-  transform: translateY(0) !important;
-}
-
-/* Quick view CTA */
-.quickView {
+/* Inquiry hint on hover */
+.inquiryHint {
   position: absolute;
   left: 50%;
   bottom: var(--space-4);
@@ -156,20 +116,13 @@
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   border-radius: var(--radius-full);
-  transition:
-    transform var(--transition-luxury),
-    background var(--transition-base),
-    color var(--transition-base);
+  transition: transform var(--transition-luxury);
   white-space: nowrap;
+  pointer-events: none;
 }
 
-.card:hover .quickView {
+.card:hover .inquiryHint {
   transform: translate(-50%, 0);
-}
-
-.quickView:hover {
-  background: var(--color-brand-primary);
-  color: var(--color-white);
 }
 
 /* Body */

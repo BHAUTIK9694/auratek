@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Logo, Newsletter, MarqueeStrip } from '@components/ui';
+import siteConfig from '@config/siteConfig';
 import styles from './Footer.module.css';
 
 const FOOTER_COLUMNS = [
@@ -18,23 +19,17 @@ const FOOTER_COLUMNS = [
   {
     title: 'Auratek',
     links: [
-      { label: 'Our Story', to: '/about' },
       { label: 'Craftsmanship', to: '/craftsmanship' },
-      { label: 'Sustainability', to: '/sustainability' },
-      { label: 'The Journal', to: '/journal' },
-      { label: 'Press', to: '/press' },
-      { label: 'Careers', to: '/careers' },
+      { label: 'Collections', to: '/collections' },
+      { label: 'Contact Us', to: '/contact' },
     ],
   },
   {
-    title: 'Client Services',
+    title: 'Legal',
     links: [
-      { label: 'Contact Concierge', to: '/contact' },
-      { label: 'Book an Appointment', to: '/appointment' },
-      { label: 'Shipping & Delivery', to: '/shipping' },
-      { label: 'Returns & Exchange', to: '/returns' },
-      { label: 'Ring Size Guide', to: '/size-guide' },
-      { label: 'Jewelry Care', to: '/care-guide' },
+      { label: 'Privacy Policy', to: '/privacy' },
+      { label: 'Terms & Conditions', to: '/terms' },
+      { label: 'Accessibility', to: '/accessibility' },
     ],
   },
 ];
@@ -49,7 +44,7 @@ const Footer = () => {
         variant="dark"
         items={[
           'Auratek Maison',
-          'Since 1992',
+          'Premium Craftsmanship',
           'Bespoke Ateliers',
           'BIS Hallmarked',
           'Handcrafted in India',
@@ -72,25 +67,27 @@ const Footer = () => {
           {/* Brand */}
           <div className={styles.brand}>
             <Link to="/" aria-label="Auratek home" className={styles.brandLogo}>
-              <Logo variant="full" size="md" color="light" />
+              <Logo variant="full" size="xl" color="light" />
             </Link>
             <p className={styles.brandDesc}>
-              Auratek crafts fine jewelry for the modern connoisseur — where heirloom
-              techniques meet contemporary design. Every piece is signed, sealed and
-              made to last generations.
+              Auratek crafts fine jewelry for the modern connoisseur — where meticulous
+              craftsmanship meets contemporary design. Every piece is made to be
+              cherished for a lifetime.
             </p>
 
             {/* Boutique */}
             <div className={styles.boutique}>
-              <p className={styles.boutiqueEyebrow}>Flagship Boutique</p>
+              <p className={styles.boutiqueEyebrow}>Our Studio</p>
               <p className={styles.boutiqueAddr}>
-                42, Aurora Lane, Bandra West<br />
-                Mumbai 400050, India
+                {siteConfig.address.line1}<br />
+                {siteConfig.address.line2}<br />
+                {siteConfig.address.area}<br />
+                {siteConfig.address.city} {siteConfig.address.zip}, {siteConfig.address.country}
               </p>
               <div className={styles.boutiqueMeta}>
-                <a href="tel:+912212345678" className={styles.metaLink}>+91 22 1234 5678</a>
+                <a href={`tel:${siteConfig.contact.phoneRaw}`} className={styles.metaLink}>{siteConfig.contact.phone}</a>
                 <span className={styles.metaDivider} />
-                <a href="mailto:concierge@auratek.com" className={styles.metaLink}>concierge@auratek.com</a>
+                <a href={`mailto:${siteConfig.contact.email}`} className={styles.metaLink}>{siteConfig.contact.email}</a>
               </div>
             </div>
           </div>
@@ -147,14 +144,12 @@ const Footer = () => {
         <div className={styles.bottom}>
           <div className={styles.bottomLeft}>
             <p className={styles.copyright}>
-              &copy; {currentYear} Auratek Maison Private Limited. All rights reserved.
+              &copy; {currentYear} Auratek Jewels. All rights reserved.
             </p>
             <nav className={styles.legal} aria-label="Legal">
               <Link to="/privacy">Privacy</Link>
               <span aria-hidden="true">·</span>
               <Link to="/terms">Terms</Link>
-              <span aria-hidden="true">·</span>
-              <Link to="/cookies">Cookies</Link>
               <span aria-hidden="true">·</span>
               <Link to="/accessibility">Accessibility</Link>
             </nav>
@@ -171,28 +166,17 @@ const Footer = () => {
             </div>
 
             <div className={styles.socials}>
-              <a href="https://instagram.com" className={styles.socialLink} aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4">
-                  <rect x="2" y="2" width="20" height="20" rx="5" />
-                  <circle cx="12" cy="12" r="4.5" />
-                  <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none" />
-                </svg>
+              <a href={siteConfig.social.instagram} className={styles.socialLink} aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                <i className="fa-brands fa-instagram"></i>
               </a>
-              <a href="https://pinterest.com" className={styles.socialLink} aria-label="Pinterest" target="_blank" rel="noopener noreferrer">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.99.04-2.84.18-.77 1.2-5.08 1.2-5.08s-.31-.61-.31-1.52c0-1.42.82-2.49 1.85-2.49.87 0 1.29.66 1.29 1.44 0 .88-.56 2.19-.85 3.41-.24 1.02.51 1.85 1.51 1.85 1.82 0 3.21-1.92 3.21-4.68 0-2.45-1.76-4.16-4.27-4.16-2.91 0-4.61 2.18-4.61 4.43 0 .88.34 1.82.76 2.33.08.1.09.19.07.29-.08.32-.25 1.02-.29 1.16-.05.19-.15.23-.35.14-1.33-.62-2.16-2.57-2.16-4.14 0-3.37 2.45-6.46 7.05-6.46 3.7 0 6.58 2.64 6.58 6.16 0 3.68-2.32 6.64-5.54 6.64-1.08 0-2.1-.56-2.45-1.22l-.67 2.53c-.24.93-.89 2.1-1.33 2.81C9.98 21.88 10.97 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/>
-                </svg>
+              <a href={siteConfig.social.pinterest} className={styles.socialLink} aria-label="Pinterest" target="_blank" rel="noopener noreferrer">
+                <i className="fa-brands fa-pinterest-p"></i>
               </a>
-              <a href="https://facebook.com" className={styles.socialLink} aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4">
-                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                </svg>
+              <a href={siteConfig.social.facebook} className={styles.socialLink} aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                <i className="fa-brands fa-facebook-f"></i>
               </a>
-              <a href="https://youtube.com" className={styles.socialLink} aria-label="YouTube" target="_blank" rel="noopener noreferrer">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4">
-                  <path d="M22 8.5a3 3 0 0 0-2.1-2.1C18 6 12 6 12 6s-6 0-7.9.4A3 3 0 0 0 2 8.5C1.6 10.4 1.6 12 1.6 12s0 1.6.4 3.5A3 3 0 0 0 4.1 17.6C6 18 12 18 12 18s6 0 7.9-.4A3 3 0 0 0 22 15.5c.4-1.9.4-3.5.4-3.5s0-1.6-.4-3.5z" />
-                  <path d="M10 15V9l5 3-5 3z" fill="currentColor" stroke="none"/>
-                </svg>
+              <a href={siteConfig.social.youtube} className={styles.socialLink} aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+                <i className="fa-brands fa-youtube"></i>
               </a>
             </div>
           </div>
@@ -200,7 +184,7 @@ const Footer = () => {
 
         {/* Origin line */}
         <p className={styles.originLine}>
-          <span aria-hidden="true">✦</span> Handcrafted with intent in the Auratek Atelier, Mumbai · Jaipur · Bangalore
+          <span aria-hidden="true">✦</span> Handcrafted with intent at the Auratek Atelier, Surat
         </p>
       </div>
     </footer>

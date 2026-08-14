@@ -4,8 +4,7 @@
 
 .hero {
   position: relative;
-  height: min(100svh, 920px);
-  min-height: 640px;
+  min-height: min(100svh, 920px);
   width: 100%;
   overflow: hidden;
   color: var(--text-on-dark);
@@ -92,7 +91,7 @@
 .inner {
   position: relative;
   z-index: 2;
-  height: 100%;
+  min-height: inherit;
   max-width: var(--container-2xl);
   margin-inline: auto;
   padding: 0 var(--section-padding-x);
@@ -105,7 +104,7 @@
 
 .content {
   max-width: 640px;
-  padding-block: var(--space-16);
+  padding-block: var(--space-16) var(--space-20);
 }
 
 .tag {
@@ -445,8 +444,7 @@
 
 @media (max-width: 640px) {
   .hero {
-    height: min(94svh, 780px);
-    min-height: 560px;
+    min-height: min(94svh, 780px);
     margin-top: calc(-1 * (68px + 36px));
   }
   .inner {

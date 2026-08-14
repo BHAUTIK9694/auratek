@@ -14,9 +14,9 @@ import styles from './Newsletter.module.css';
 const Newsletter = ({
   variant = 'dark',
   inline = false,
-  eyebrow = 'The Auratek Atelier',
-  title = 'Enter a world of quiet luxury.',
-  description = 'Discover new collections, private previews and stories from the workshop, straight to your inbox.',
+  eyebrow = 'More Beautiful Moments Await',
+  title = 'Let us be part of your story.',
+  description = 'Be the first to discover new collections, exclusive previews, and special offers — delivered with love to your inbox.',
 }) => {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState('idle'); // idle | submitting | success | error

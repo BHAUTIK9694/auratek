@@ -10,10 +10,10 @@ import styles from './AnnouncementBar.module.css';
  * @param {number} props.interval - Rotation interval in ms. Default 4500.
  */
 const DEFAULT_MESSAGES = [
-  'Complimentary express shipping on orders above ₹25,000',
-  'Book a private virtual appointment with our jewelry stylist',
-  'Lifetime buyback · Certified natural diamonds · BIS Hallmarked gold',
-  'Exclusive members-only preview of our Aurum Solstice collection',
+  'Free shipping on all orders above ₹25,000 ✦ Shop Now',
+  'BIS Hallmarked Gold · IGI/GIA Certified Diamonds · Transparent Pricing',
+  '15-Day Easy Returns · Lifetime Exchange · No Questions Asked',
+  'New Arrivals — Aurum Solstice Collection Now Live',
 ];
 
 const AnnouncementBar = ({ messages = DEFAULT_MESSAGES, interval = 4500 }) => {

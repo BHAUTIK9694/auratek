@@ -8,7 +8,7 @@ const PROCESS = [
     step: '01',
     title: 'Sketch',
     body:
-      'Every piece begins on paper. Our designers hand-draw each collection at the Mumbai studio before a single stone is cut.',
+      'Every piece begins on paper. Our designers hand-draw each collection before a single stone is cut.',
     icon: (
       <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.1">
         <path d="M5 33l7-24 6 20 4-12 6 8 7-16" />
@@ -33,7 +33,7 @@ const PROCESS = [
     step: '03',
     title: 'Set',
     body:
-      'Each diamond is hand-set under 10x magnification by artisans who have trained for a minimum of eleven years.',
+      'Each diamond is hand-set under 10x magnification by skilled artisans with years of experience.',
     icon: (
       <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.1">
         <path d="M6 15l7-8h14l7 8-14 18L6 15z" />
@@ -74,22 +74,22 @@ const Craftsmanship = () => {
               The Craft
             </p>
             <h2 id="craft-heading" className={styles.title}>
-              Four hundred and eighty hours.
+              Meticulous attention
               <br />
-              <em>One promise.</em>
+              to every <em>detail.</em>
             </h2>
           </div>
 
           <div className={`reveal reveal--delay-2 ${styles.bodyCol}`}>
             <p className={styles.body}>
-              At Auratek, a single solitaire passes through twenty-two pairs
-              of hands before it leaves our atelier. Every scratch is polished
-              by a person, not a machine. Every stone is chosen by an eye,
+              At Auratek, every piece passes through multiple stages of careful
+              craftsmanship before it reaches you. Every scratch is polished
+              by hand, not a machine. Every stone is chosen by eye,
               not a spreadsheet.
             </p>
             <p className={styles.body}>
               We call this{' '}
-              <em>slow luxury</em> — because heirlooms are not made in a rush.
+              <em>slow luxury</em> — because quality takes time.
             </p>
 
             <Link to="/craftsmanship" className={styles.cta}>
@@ -105,21 +105,21 @@ const Craftsmanship = () => {
         <div className={`reveal ${styles.mediaWrap}`}>
           <div className={styles.mediaMain}>
             <img
-              src="https://images.unsplash.com/photo-1616624828017-83c9c6e50e9c?auto=format&fit=crop&w=1600&q=90"
+              src="/images/craftsmanship-main.jpg"
               alt="A master craftsman setting a diamond in an Auratek workshop"
               loading="lazy"
             />
           </div>
           <div className={styles.mediaSmall1}>
             <img
-              src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=85"
+              src="/images/eternity-band.jpg"
               alt="Precision jewelry tools at the Auratek atelier"
               loading="lazy"
             />
           </div>
           <div className={styles.mediaSmall2}>
             <img
-              src="https://images.unsplash.com/photo-1596944924616-7b38e7cfac36?auto=format&fit=crop&w=800&q=85"
+              src="/images/craftsmanship-diamonds.jpg"
               alt="Loose diamonds being sorted by an Auratek gemmologist"
               loading="lazy"
             />

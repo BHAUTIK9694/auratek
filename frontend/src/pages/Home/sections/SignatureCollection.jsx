@@ -18,14 +18,14 @@ const SignatureCollection = () => {
         <div className={styles.media}>
           <div className={styles.mediaFrame}>
             <img
-              src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=1400&q=90"
+              src="/images/aurum-solstice.jpg"
               alt="Aurum Solstice — 18k rose gold ring set with a single sunlit diamond"
               className={styles.mediaImg}
               loading="lazy"
             />
             <span className={styles.mediaBadge}>
               <span className={styles.mediaBadgeDot} />
-              Limited Edition · 48 Pieces
+              Limited Edition
             </span>
           </div>
 
@@ -54,10 +54,9 @@ const SignatureCollection = () => {
 
             <p className={styles.description}>
               Forged from 18k rose gold and set with sunlit champagne
-              diamonds, Aurum Solstice was drawn from a single afternoon
-              in our Jaipur atelier — the moment sunlight fell through
-              the master craftsman&apos;s window onto rough stones,
-              and stayed there.
+              diamonds, Aurum Solstice captures the beauty of golden hour —
+              when light meets precious stones and creates something
+              extraordinary.
             </p>
 
             <ul className={styles.spec}>
@@ -70,12 +69,12 @@ const SignatureCollection = () => {
                 <span className={styles.specValue}>Champagne diamonds · IGI certified</span>
               </li>
               <li>
-                <span className={styles.specLabel}>Provenance</span>
-                <span className={styles.specValue}>Jaipur Atelier · Master signed</span>
+                <span className={styles.specLabel}>Craftsmanship</span>
+                <span className={styles.specValue}>Handcrafted · Quality assured</span>
               </li>
               <li>
                 <span className={styles.specLabel}>Edition</span>
-                <span className={styles.specValue}>48 individually numbered pieces</span>
+                <span className={styles.specValue}>Limited numbered pieces</span>
               </li>
             </ul>
 

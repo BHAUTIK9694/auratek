@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '@hooks';
+import siteConfig from '@config/siteConfig';
 import styles from './FinalCta.module.css';
 
 /**
@@ -15,7 +16,7 @@ const FinalCta = () => {
       {/* Backdrop image */}
       <div className={styles.media} aria-hidden="true">
         <img
-          src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=2200&q=90"
+          src="/images/bridal-category.jpg"
           alt=""
           loading="lazy"
         />
@@ -37,26 +38,24 @@ const FinalCta = () => {
         </p>
 
         <h2 id="final-heading" className={styles.title}>
-          Meet your <em>stylist</em>.
-          <br />
-          In our boutique. Or in your living room.
+          Let's find your <em>perfect piece</em>.
         </h2>
 
         <p className={styles.description}>
-          Book a private appointment with an Auratek stylist — at our flagship
-          boutique, at your home, or over a virtual coffee. One hour of
-          undivided attention, no pressure to buy.
+          Have a question or need help choosing? Reach out to our concierge
+          via WhatsApp, call, or email — we're here to help you find exactly
+          what you're looking for.
         </p>
 
         <div className={styles.ctas}>
-          <Link to="/appointment" className={styles.ctaPrimary}>
-            <span>Book an Appointment</span>
+          <Link to="/contact" className={styles.ctaPrimary}>
+            <span>Get in Touch</span>
             <svg width="22" height="10" viewBox="0 0 22 10" fill="none" stroke="currentColor" strokeWidth="1.2">
               <path d="M0 5h20M17 1l4 4-4 4" />
             </svg>
           </Link>
 
-          <Link to="/stores" className={styles.ctaLink}>
+          <Link to="/contact" className={styles.ctaLink}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4">
               <path d="M12 21s-8-6.75-8-13a8 8 0 1 1 16 0c0 6.25-8 13-8 13z"/>
               <circle cx="12" cy="8" r="3"/>
@@ -73,7 +72,7 @@ const FinalCta = () => {
             </svg>
             <div>
               <p className={styles.contactLabel}>Concierge</p>
-              <a href="tel:+912212345678" className={styles.contactValue}>+91 22 1234 5678</a>
+              <a href={`tel:${siteConfig.contact.phoneRaw}`} className={styles.contactValue}>{siteConfig.contact.phone}</a>
             </div>
           </div>
           <span className={styles.contactDivider} />
@@ -84,7 +83,7 @@ const FinalCta = () => {
             </svg>
             <div>
               <p className={styles.contactLabel}>Email</p>
-              <a href="mailto:concierge@auratek.com" className={styles.contactValue}>concierge@auratek.com</a>
+              <a href={`mailto:${siteConfig.contact.email}`} className={styles.contactValue}>{siteConfig.contact.email}</a>
             </div>
           </div>
           <span className={styles.contactDivider} />
@@ -95,7 +94,7 @@ const FinalCta = () => {
             </svg>
             <div>
               <p className={styles.contactLabel}>Hours</p>
-              <span className={styles.contactValue}>Mon–Sun · 11am to 8pm</span>
+              <span className={styles.contactValue}>{siteConfig.hours.days} · {siteConfig.hours.time}</span>
             </div>
           </div>
         </div>
