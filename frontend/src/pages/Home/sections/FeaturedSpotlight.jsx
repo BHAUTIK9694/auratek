@@ -24,7 +24,7 @@ const FeaturedSpotlight = () => {
               </div>
               <div className={styles.info}>
                 <span className={styles.name}>{p.name}</span>
-                <span className={styles.price}>{p.price}</span>
+                {/* <span className={styles.price}>{p.price}</span> */}
               </div>
             </div>
           ))}

@@ -3,9 +3,9 @@ import { ProductCard } from '@components/ui';
 import { NEW_ARRIVALS } from '@pages/Home/data';
 import styles from './Collections.module.css';
 
-const CATEGORY_FILTERS = ['All', 'Rings', 'Necklaces', 'Earrings', 'Bracelets'];
-const METAL_FILTERS = ['All Metals', 'Rose Gold', 'Yellow Gold', 'White Gold', 'Platinum'];
-const SORT_OPTIONS = ['Newest', 'Price: Low to High', 'Price: High to Low'];
+const CATEGORY_FILTERS = ['All', 'Rings', 'Necklaces', 'Earrings', 'Bracelets', 'Pendants', 'Bridal Sets', 'Vaddanam / South Indian'];
+const METAL_FILTERS = ['All Metals', 'Rose Gold', 'Yellow Gold', 'White Gold', '18kt Rose Gold', '18kt Yellow Gold', '18kt White Gold', 'Platinum'];
+const SORT_OPTIONS = ['Newest'];
 
 const Collections = () => {
   const [category, setCategory] = useState('All');
@@ -25,11 +25,6 @@ const Collections = () => {
   }
 
   // Sort
-  if (sort === 'Price: Low to High') {
-    products.sort((a, b) => parseInt(a.price?.replace(/[^\d]/g, '') || '0') - parseInt(b.price?.replace(/[^\d]/g, '') || '0'));
-  } else if (sort === 'Price: High to Low') {
-    products.sort((a, b) => parseInt(b.price?.replace(/[^\d]/g, '') || '0') - parseInt(a.price?.replace(/[^\d]/g, '') || '0'));
-  }
 
   return (
     <main className={styles.page}>

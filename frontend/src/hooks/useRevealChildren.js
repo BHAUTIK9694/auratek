@@ -18,6 +18,7 @@ const useRevealChildren = ({
   threshold = 0.1,
   rootMargin = '0px 0px -60px 0px',
   once = true,
+  dependencies = [],
 } = {}) => {
   const ref = useRef(null);
 
@@ -52,7 +53,7 @@ const useRevealChildren = ({
 
     targets.forEach((el) => observer.observe(el));
     return () => observer.disconnect();
-  }, [threshold, rootMargin, once]);
+  }, [threshold, rootMargin, once, ...dependencies]);
 
   return ref;
 };

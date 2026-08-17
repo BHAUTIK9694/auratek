@@ -91,12 +91,12 @@ const ProductCard = ({
             </div>
           )}
 
-          {(price || originalPrice) && (
+          {/* {(price || originalPrice) && (
             <div className={styles.priceRow}>
               {price && <span className={styles.price}>{price}</span>}
               {originalPrice && <span className={styles.originalPrice}>{originalPrice}</span>}
             </div>
-          )}
+          )} */}
         </div>
       </article>
 

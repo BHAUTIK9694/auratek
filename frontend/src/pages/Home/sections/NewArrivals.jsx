@@ -11,6 +11,9 @@ const FILTERS = [
   { key: 'Necklaces', label: 'Necklaces' },
   { key: 'Earrings', label: 'Earrings' },
   { key: 'Bracelets', label: 'Bracelets' },
+  { key: 'Pendants', label: 'Pendants' },
+  { key: 'Bridal Sets', label: 'Bridal Sets' },
+  { key: 'Vaddanam', label: 'Vaddanam / South Indian' },
 ];
 
 /**
@@ -18,7 +21,7 @@ const FILTERS = [
  */
 const NewArrivals = () => {
   const [filter, setFilter] = useState('all');
-  const sectionRef = useRevealChildren();
+  const sectionRef = useRevealChildren({ dependencies: [filter] });
 
   const products = filter === 'all'
     ? NEW_ARRIVALS
@@ -57,7 +60,7 @@ const NewArrivals = () => {
         </div>
       </div>
 
-      <div className={styles.grid}>
+      <div key={filter} className={styles.grid}>
         {products.map((p, i) => (
           <div
             key={p.id}

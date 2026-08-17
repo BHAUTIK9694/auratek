@@ -6,6 +6,9 @@ const METALS = [
   { label: 'Rose Gold', color: '#F4C3B0', to: '/collections', desc: 'Warm & romantic' },
   { label: 'Yellow Gold', color: '#F1C27D', to: '/collections', desc: 'Classic & timeless' },
   { label: 'White Gold', color: '#E8E1D9', to: '/collections', desc: 'Modern & sleek' },
+  { label: '18kt Rose Gold', color: '#F4C3B0', to: '/collections', desc: 'Premium warm & romantic' },
+  { label: '18kt Yellow Gold', color: '#F1C27D', to: '/collections', desc: 'Premium classic & timeless' },
+  { label: '18kt White Gold', color: '#E8E1D9', to: '/collections', desc: 'Premium modern & sleek' },
   { label: 'Platinum', color: '#D4D4D8', to: '/collections', desc: 'Bold & enduring' },
 ];
 

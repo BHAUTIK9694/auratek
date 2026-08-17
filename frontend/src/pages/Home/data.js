@@ -53,6 +53,13 @@ export const CATEGORIES = [
     size: 'md',
   },
   {
+    title: 'Pendants',
+    subtitle: 'Solitaire · Halo · Motif',
+    image: '/images/pendant-collection-1.jpeg',
+    to: '/collections?category=Pendants',
+    size: 'md',
+  },
+  {
     title: 'Earrings',
     subtitle: 'Studs · Hoops · Chandeliers',
     image: '/images/earrings-category.jpg',
@@ -62,105 +69,881 @@ export const CATEGORIES = [
   {
     title: 'Bracelets',
     subtitle: 'Tennis · Cuffs · Bangles',
-    image: '/images/bracelets-category.jpg',
-    to: '/bracelets',
+    image: '/images/bracelet-collection-1.jpeg',
+    to: '/collections?category=Bracelets',
     size: 'md',
   },
   {
-    title: 'Bridal',
+    title: 'Bridal Sets',
     subtitle: 'Engagement · Anniversary',
-    image: '/images/bridal-category.jpg',
-    to: '/bridal',
+    image: '/images/layered-diamond-emerald-haaram.jpeg',
+    to: '/collections?category=Bridal Sets',
     size: 'lg',
   },
   {
-    title: 'Men',
-    subtitle: 'Signet Rings · Chains · Cufflinks',
-    image: '/images/mens-category.jpg',
-    to: '/mens',
+    title: 'Vaddanam',
+    subtitle: 'South Indian · Waist Belts',
+    image: '/images/vaddanam-3.png',
+    to: '/collections?category=Vaddanam',
     size: 'md',
   },
 ];
 
 export const NEW_ARRIVALS = [
   {
-    id: 'aur-01',
-    name: 'Solstice Halo Solitaire',
-    category: 'Rings · 18k Rose Gold',
-    image: '/images/rings-category.jpg',
-    imageAlt: '/images/eternity-band.jpg',
-    price: '₹4,85,000',
-    badge: 'new',
-    tones: ['#F1C27D', '#E8E1D9', '#F4C3B0'],
-  },
+  id: 'bridal-01',
+  name: 'Antique Emerald Long Necklace Set',
+  category: 'Bridal Sets · 18k Yellow Gold',
+  image: '/images/antique-emerald-long-necklace-set.jpeg',
+  imageAlt: '/images/antique-emerald-long-necklace-set.jpeg',
+  badge: 'new',
+  tones: [
+    '#F1C27D'
+  ]
+},
   {
-    id: 'cel-14',
-    name: 'Celestial Muse Pendant',
-    category: 'Necklaces · 18k Yellow Gold',
-    image: '/images/celestial-muse.jpg',
-    imageAlt: '/images/celestial-pendant-alt.jpg',
-    price: '₹2,15,000',
-    originalPrice: '₹2,40,000',
-    badge: 'bestseller',
-    tones: ['#F1C27D', '#E8E1D9'],
-  },
+  id: 'bridal-02',
+  name: 'Layered Emerald Drop Haaram',
+  category: 'Necklaces · 18k White Gold',
+  image: '/images/layered-emerald-drop-haaram.jpeg',
+  imageAlt: '/images/layered-emerald-drop-haaram.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
   {
-    id: 'pet-08',
-    name: 'Petal Rose Studs',
-    category: 'Earrings · 18k Rose Gold',
-    image: '/images/earrings-category.jpg',
-    imageAlt: '/images/petal-studs-alt.jpg',
-    price: '₹98,500',
-    badge: 'new',
-    tones: ['#F4C3B0', '#F1C27D'],
-  },
+  id: 'bridal-03',
+  name: 'Three-Layer Diamond Long Necklace',
+  category: 'Necklaces · 18k White Gold',
+  image: '/images/three-layer-diamond-long-necklace.jpeg',
+  imageAlt: '/images/three-layer-diamond-long-necklace.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
   {
-    id: 'nir-22',
-    name: 'Nirvaana Tennis Bracelet',
-    category: 'Bracelets · Platinum 950',
-    image: '/images/bracelets-category.jpg',
-    imageAlt: '/images/tennis-bracelet-alt.jpg',
-    price: '₹6,20,000',
-    badge: 'limited',
-    tones: ['#E8E1D9'],
-  },
+  id: 'bridal-04',
+  name: 'Pear Emerald Diamond Choker',
+  category: 'Bridal Sets · 18k White Gold',
+  image: '/images/pear-emerald-diamond-choker.jpeg',
+  imageAlt: '/images/pear-emerald-diamond-choker.jpeg',
+  badge: 'bestseller',
+  tones: [
+    '#E8E1D9'
+  ]
+},
   {
-    id: 'aur-07',
-    name: 'Aurum Bar Necklace',
-    category: 'Necklaces · 18k Yellow Gold',
-    image: '/images/necklaces-category.jpg',
-    imageAlt: '/images/bar-necklace-alt.jpg',
-    price: '₹1,42,000',
-    tones: ['#F1C27D', '#E8E1D9', '#F4C3B0'],
-  },
+  id: 'bridal-05',
+  name: 'Square Emerald Diamond Choker',
+  category: 'Bridal Sets · 18k White Gold',
+  image: '/images/square-emerald-diamond-choker.jpeg',
+  imageAlt: '/images/square-emerald-diamond-choker.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
   {
-    id: 'aur-11',
-    name: 'Eternity Wedding Band',
-    category: 'Rings · Platinum & Diamonds',
-    image: '/images/eternity-band.jpg',
-    imageAlt: '/images/eternity-band-alt.jpg',
-    price: '₹2,05,000',
-    tones: ['#E8E1D9', '#F1C27D'],
-  },
+  id: 'bridal-06',
+  name: 'V-Shape Layered Diamond Haaram',
+  category: 'Necklaces · 18k White Gold',
+  image: '/images/v-shape-layered-diamond-haaram.jpeg',
+  imageAlt: '/images/v-shape-layered-diamond-haaram.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
   {
-    id: 'cel-27',
-    name: 'Astra Diamond Hoops',
-    category: 'Earrings · 18k White Gold',
-    image: '/images/diamond-hoops.jpg',
-    imageAlt: '/images/petal-studs-alt.jpg',
-    price: '₹1,58,000',
-    badge: 'new',
-    tones: ['#E8E1D9'],
-  },
+  id: 'bridal-07',
+  name: 'Antique Diamond Necklace with Large Pendant',
+  category: 'Necklaces · 18k Yellow Gold',
+  image: '/images/antique-diamond-necklace-large-pendant.jpeg',
+  imageAlt: '/images/antique-diamond-necklace-large-pendant.jpeg',
+  tones: [
+    '#F1C27D'
+  ]
+},
   {
-    id: 'nir-03',
-    name: 'Aria Chain Ring',
-    category: 'Rings · 18k Yellow Gold',
-    image: '/images/aria-chain-ring.jpg',
-    imageAlt: '/images/aria-chain-ring-alt.jpg',
-    price: '₹68,000',
-    tones: ['#F1C27D', '#F4C3B0'],
-  },
+  id: 'bridal-08',
+  name: 'Five-Layer Diamond Haaram',
+  category: 'Bridal Sets · 18k White Gold',
+  image: '/images/five-layer-diamond-haaram.jpeg',
+  imageAlt: '/images/five-layer-diamond-haaram.jpeg',
+  badge: 'limited',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'bridal-09',
+  name: 'Heavy Bridal Diamond Choker',
+  category: 'Bridal Sets · 18k White Gold',
+  image: '/images/heavy-bridal-diamond-choker.jpeg',
+  imageAlt: '/images/heavy-bridal-diamond-choker.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'bridal-10',
+  name: 'Diamond Necklace with Emerald Beads',
+  category: 'Necklaces · 18k White Gold',
+  image: '/images/diamond-necklace-emerald-beads.jpeg',
+  imageAlt: '/images/diamond-necklace-emerald-beads.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'bridal-11',
+  name: 'Majestic Bridal Diamond Necklace',
+  category: 'Bridal Sets · 18k White Gold',
+  image: '/images/majestic-bridal-diamond-necklace.jpeg',
+  imageAlt: '/images/majestic-bridal-diamond-necklace.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+}
+,
+  {
+  id: 'bridal-12',
+  name: 'Elegant Emerald Pearl Diamond Necklace',
+  category: 'Necklaces · 18k Yellow Gold',
+  image: '/images/elegant-emerald-pearl-diamond-necklace.jpeg',
+  imageAlt: '/images/elegant-emerald-pearl-diamond-necklace.jpeg',
+  tones: [
+    '#F1C27D'
+  ]
+},
+  {
+  id: 'bridal-13',
+  name: 'Layered Diamond Necklace with Emerald Pendant',
+  category: 'Necklaces · 18k White Gold',
+  image: '/images/layered-diamond-emerald-pendant.jpeg',
+  imageAlt: '/images/layered-diamond-emerald-pendant.jpeg',
+  badge: 'new',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'bridal-14',
+  name: 'Delicate V-Shape Emerald Diamond Necklace',
+  category: 'Necklaces · 18k White Gold',
+  image: '/images/delicate-v-shape-emerald-diamond.jpeg',
+  imageAlt: '/images/delicate-v-shape-emerald-diamond.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'bridal-15',
+  name: 'Extravagant Tanzanite Diamond Necklace',
+  category: 'Bridal Sets · 18k White Gold',
+  image: '/images/extravagant-tanzanite-diamond.jpeg',
+  imageAlt: '/images/extravagant-tanzanite-diamond.jpeg',
+  badge: 'limited',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'bridal-16',
+  name: 'Royal Ruby Emerald Diamond Necklace',
+  category: 'Bridal Sets · 18k Yellow Gold',
+  image: '/images/royal-ruby-emerald-diamond.jpeg',
+  imageAlt: '/images/royal-ruby-emerald-diamond.jpeg',
+  tones: [
+    '#F1C27D'
+  ]
+},
+  {
+  id: 'bridal-17',
+  name: 'Multi-Layered Emerald Diamond Haaram',
+  category: 'Bridal Sets · 18k White Gold',
+  image: '/images/multi-layered-emerald-diamond-haaram.jpeg',
+  imageAlt: '/images/multi-layered-emerald-diamond-haaram.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'bridal-18',
+  name: 'Peacock Coral Diamond Haaram',
+  category: 'Bridal Sets · 18k Yellow Gold',
+  image: '/images/peacock-coral-diamond-haaram.jpeg',
+  imageAlt: '/images/peacock-coral-diamond-haaram.jpeg',
+  badge: 'bestseller',
+  tones: [
+    '#F1C27D'
+  ]
+},
+  {
+  id: 'bridal-19',
+  name: 'V-Shape Emerald Drop Diamond Choker',
+  category: 'Necklaces · 18k White Gold',
+  image: '/images/v-shape-emerald-drop-diamond-choker.jpeg',
+  imageAlt: '/images/v-shape-emerald-drop-diamond-choker.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'bridal-20',
+  name: 'Round Emerald Pendant Diamond Choker',
+  category: 'Necklaces · 18k White Gold',
+  image: '/images/round-emerald-pendant-diamond-choker.jpeg',
+  imageAlt: '/images/round-emerald-pendant-diamond-choker.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'bridal-21',
+  name: 'Heavy Wide Emerald Diamond Choker',
+  category: 'Bridal Sets · 18k White Gold',
+  image: '/images/heavy-wide-emerald-diamond-choker.jpeg',
+  imageAlt: '/images/heavy-wide-emerald-diamond-choker.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+}
+,
+  {
+  id: 'vaddanam-01',
+  name: 'Antique Diamond Emerald Vaddanam',
+  category: 'Vaddanam / South Indian · 18k White Gold',
+  image: '/images/vaddanam-1.png',
+  imageAlt: '/images/vaddanam-1.png',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'vaddanam-02',
+  name: 'Heavy Bridal Emerald Vaddanam',
+  category: 'Vaddanam / South Indian · 18k White Gold',
+  image: '/images/vaddanam-2.png',
+  imageAlt: '/images/vaddanam-2.png',
+  badge: 'bestseller',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'vaddanam-03',
+  name: 'Traditional Gold Diamond Vaddanam',
+  category: 'Vaddanam / South Indian · 18k Yellow Gold',
+  image: '/images/vaddanam-3.png',
+  imageAlt: '/images/vaddanam-3.png',
+  tones: [
+    '#F1C27D'
+  ]
+},
+  {
+  id: 'vaddanam-04',
+  name: 'Lakshmi Motif Diamond Vaddanam',
+  category: 'Vaddanam / South Indian · 18k Yellow Gold',
+  image: '/images/vaddanam-4.png',
+  imageAlt: '/images/vaddanam-4.png',
+  badge: 'new',
+  tones: [
+    '#F1C27D'
+  ]
+},
+  {
+  id: 'vaddanam-05',
+  name: 'Intricate Diamond Vaddanam with Emerald Centers',
+  category: 'Vaddanam / South Indian · 18k Yellow Gold',
+  image: '/images/vaddanam-5.png',
+  imageAlt: '/images/vaddanam-5.png',
+  tones: [
+    '#F1C27D'
+  ]
+}
+,
+  {
+  id: 'earring-1',
+  name: 'Radiant Rose Gold Drop Earrings',
+  category: 'Earrings · 18k White Gold',
+  image: '/images/earring-collection-1.jpeg',
+  imageAlt: '/images/earring-collection-1.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'earring-2',
+  name: 'Luminous White Gold Drop Earrings',
+  category: 'Earrings · 18k Yellow Gold',
+  image: '/images/earring-collection-2.jpeg',
+  imageAlt: '/images/earring-collection-2.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'earring-3',
+  name: 'Regal White Gold Hoops',
+  category: 'Earrings · Platinum',
+  image: '/images/earring-collection-3.jpeg',
+  imageAlt: '/images/earring-collection-3.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'earring-4',
+  name: 'Timeless White Gold Drop Earrings',
+  category: 'Earrings · 18k White Gold',
+  image: '/images/earring-collection-4.jpeg',
+  imageAlt: '/images/earring-collection-4.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'earring-5',
+  name: 'Majestic White Gold Jhumkas',
+  category: 'Earrings · 18k Yellow Gold',
+  image: '/images/earring-collection-5.jpeg',
+  imageAlt: '/images/earring-collection-5.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'earring-6',
+  name: 'Elegant Pearl Jhumkas',
+  category: 'Earrings · Platinum',
+  image: '/images/earring-collection-6.jpeg',
+  imageAlt: '/images/earring-collection-6.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'earring-7',
+  name: 'Delicate Rose Gold Jhumkas',
+  category: 'Earrings · Platinum',
+  image: '/images/earring-collection-7.jpeg',
+  imageAlt: '/images/earring-collection-7.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'earring-8',
+  name: 'Radiant Yellow Gold Studs',
+  category: 'Earrings · 18k Rose Gold',
+  image: '/images/earring-collection-8.jpeg',
+  imageAlt: '/images/earring-collection-8.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'earring-9',
+  name: 'Delicate Pearl Studs',
+  category: 'Earrings · Platinum',
+  image: '/images/earring-collection-9.jpeg',
+  imageAlt: '/images/earring-collection-9.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'earring-10',
+  name: 'Delicate Diamond Dusters',
+  category: 'Earrings · 18k Yellow Gold',
+  image: '/images/earring-collection-10.jpeg',
+  imageAlt: '/images/earring-collection-10.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'earring-11',
+  name: 'Classic Rose Gold Chandeliers',
+  category: 'Earrings · 18k Rose Gold',
+  image: '/images/earring-collection-11.jpeg',
+  imageAlt: '/images/earring-collection-11.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'earring-12',
+  name: 'Classic Rose Gold Drop Earrings',
+  category: 'Earrings · 18k White Gold',
+  image: '/images/earring-collection-12.jpeg',
+  imageAlt: '/images/earring-collection-12.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'earring-13',
+  name: 'Classic Pearl Studs',
+  category: 'Earrings · 18k Rose Gold',
+  image: '/images/earring-collection-13.jpeg',
+  imageAlt: '/images/earring-collection-13.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'earring-14',
+  name: 'Majestic Rose Gold Chandeliers',
+  category: 'Earrings · Platinum',
+  image: '/images/earring-collection-14.jpeg',
+  imageAlt: '/images/earring-collection-14.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'earring-15',
+  name: 'Classic Pearl Jhumkas',
+  category: 'Earrings · Platinum',
+  image: '/images/earring-collection-15.jpeg',
+  imageAlt: '/images/earring-collection-15.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'earring-16',
+  name: 'Elegant Ruby Drop Earrings',
+  category: 'Earrings · 18k Rose Gold',
+  image: '/images/earring-collection-16.jpeg',
+  imageAlt: '/images/earring-collection-16.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'earring-17',
+  name: 'Delicate White Gold Jhumkas',
+  category: 'Earrings · Platinum',
+  image: '/images/earring-collection-17.jpeg',
+  imageAlt: '/images/earring-collection-17.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'earring-18',
+  name: 'Classic Yellow Gold Chandeliers',
+  category: 'Earrings · 18k Rose Gold',
+  image: '/images/earring-collection-18.jpeg',
+  imageAlt: '/images/earring-collection-18.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'earring-19',
+  name: 'Elegant Diamond Drop Earrings',
+  category: 'Earrings · 18k White Gold',
+  image: '/images/earring-collection-19.jpeg',
+  imageAlt: '/images/earring-collection-19.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+}
+,
+  {
+  id: 'bracelet-1',
+  name: 'Royal Yellow Gold Cuff',
+  category: 'Bracelets · Platinum',
+  image: '/images/bracelet-collection-1.jpeg',
+  imageAlt: '/images/bracelet-collection-1.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'bracelet-2',
+  name: 'Eternity Rose Gold Bangle',
+  category: 'Bracelets · 18k Yellow Gold',
+  image: '/images/bracelet-collection-2.jpeg',
+  imageAlt: '/images/bracelet-collection-2.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'bracelet-3',
+  name: 'Eternity Diamond Cuff',
+  category: 'Bracelets · 18k White Gold',
+  image: '/images/bracelet-collection-3.jpeg',
+  imageAlt: '/images/bracelet-collection-3.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'bracelet-4',
+  name: 'Classic Yellow Gold Cuff',
+  category: 'Bracelets · 18k Rose Gold',
+  image: '/images/bracelet-collection-4.jpeg',
+  imageAlt: '/images/bracelet-collection-4.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'bracelet-5',
+  name: 'Signature Rose Gold Bangle',
+  category: 'Bracelets · 18k Yellow Gold',
+  image: '/images/bracelet-collection-5.jpeg',
+  imageAlt: '/images/bracelet-collection-5.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'bracelet-6',
+  name: 'Halo Diamond Bangle',
+  category: 'Bracelets · 18k Yellow Gold',
+  image: '/images/bracelet-collection-6.jpeg',
+  imageAlt: '/images/bracelet-collection-6.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'bracelet-7',
+  name: 'Royal White Gold Cuff',
+  category: 'Bracelets · 18k Yellow Gold',
+  image: '/images/bracelet-collection-7.jpeg',
+  imageAlt: '/images/bracelet-collection-7.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'bracelet-8',
+  name: 'Signature Diamond Tennis Bracelet',
+  category: 'Bracelets · 18k Yellow Gold',
+  image: '/images/bracelet-collection-8.jpeg',
+  imageAlt: '/images/bracelet-collection-8.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'bracelet-9',
+  name: 'Infinity Rose Gold Bangle',
+  category: 'Bracelets · 18k Rose Gold',
+  image: '/images/bracelet-collection-9.jpeg',
+  imageAlt: '/images/bracelet-collection-9.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'bracelet-10',
+  name: 'Infinity Yellow Gold Tennis Bracelet',
+  category: 'Bracelets · 18k White Gold',
+  image: '/images/bracelet-collection-10.jpeg',
+  imageAlt: '/images/bracelet-collection-10.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'bracelet-11',
+  name: 'Infinity Diamond Tennis Bracelet',
+  category: 'Bracelets · 18k White Gold',
+  image: '/images/bracelet-collection-11.jpeg',
+  imageAlt: '/images/bracelet-collection-11.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+}
+,
+  {
+  id: 'pendant-1',
+  name: 'Signature Sapphire Motif Pendant',
+  category: 'Pendants · 18k Yellow Gold',
+  image: '/images/pendant-collection-1.jpeg',
+  imageAlt: '/images/pendant-collection-1.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'pendant-2',
+  name: 'Radiant Pearl Pendant',
+  category: 'Pendants · 18k Yellow Gold',
+  image: '/images/pendant-collection-2.jpeg',
+  imageAlt: '/images/pendant-collection-2.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'pendant-3',
+  name: 'Delicate Yellow Gold Motif Pendant',
+  category: 'Pendants · 18k Yellow Gold',
+  image: '/images/pendant-collection-3.jpeg',
+  imageAlt: '/images/pendant-collection-3.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'pendant-4',
+  name: 'Radiant Rose Gold Motif Pendant',
+  category: 'Pendants · 18k Rose Gold',
+  image: '/images/pendant-collection-4.jpeg',
+  imageAlt: '/images/pendant-collection-4.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'pendant-5',
+  name: 'Classic Yellow Gold Medallion',
+  category: 'Pendants · 18k Yellow Gold',
+  image: '/images/pendant-collection-5.jpeg',
+  imageAlt: '/images/pendant-collection-5.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'pendant-6',
+  name: 'Majestic White Gold Pendant',
+  category: 'Pendants · 18k Rose Gold',
+  image: '/images/pendant-collection-6.jpeg',
+  imageAlt: '/images/pendant-collection-6.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'pendant-7',
+  name: 'Ornate White Gold Motif Pendant',
+  category: 'Pendants · 18k White Gold',
+  image: '/images/pendant-collection-7.jpeg',
+  imageAlt: '/images/pendant-collection-7.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'pendant-8',
+  name: 'Luminous Diamond Pendant',
+  category: 'Pendants · 18k Rose Gold',
+  image: '/images/pendant-collection-8.jpeg',
+  imageAlt: '/images/pendant-collection-8.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'pendant-9',
+  name: 'Regal Yellow Gold Pendant',
+  category: 'Pendants · 18k Rose Gold',
+  image: '/images/pendant-collection-9.jpeg',
+  imageAlt: '/images/pendant-collection-9.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'pendant-10',
+  name: 'Classic Pearl Pendant',
+  category: 'Pendants · 18k Rose Gold',
+  image: '/images/pendant-collection-10.jpeg',
+  imageAlt: '/images/pendant-collection-10.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'pendant-11',
+  name: 'Intricate Ruby Motif Pendant',
+  category: 'Pendants · 18k White Gold',
+  image: '/images/pendant-collection-11.jpeg',
+  imageAlt: '/images/pendant-collection-11.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'pendant-12',
+  name: 'Regal Ruby Pendant',
+  category: 'Pendants · 18k White Gold',
+  image: '/images/pendant-collection-12.jpeg',
+  imageAlt: '/images/pendant-collection-12.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'pendant-13',
+  name: 'Signature Ruby Pendant',
+  category: 'Pendants · 18k Yellow Gold',
+  image: '/images/pendant-collection-13.jpeg',
+  imageAlt: '/images/pendant-collection-13.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'pendant-14',
+  name: 'Signature Diamond Motif Pendant',
+  category: 'Pendants · 18k Yellow Gold',
+  image: '/images/pendant-collection-14.jpeg',
+  imageAlt: '/images/pendant-collection-14.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'pendant-15',
+  name: 'Intricate Sapphire Drop Pendant',
+  category: 'Pendants · 18k Rose Gold',
+  image: '/images/pendant-collection-15.jpeg',
+  imageAlt: '/images/pendant-collection-15.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'pendant-16',
+  name: 'Radiant Diamond Pendant',
+  category: 'Pendants · 18k Rose Gold',
+  image: '/images/pendant-collection-16.jpeg',
+  imageAlt: '/images/pendant-collection-16.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'pendant-17',
+  name: 'Classic Rose Gold Medallion',
+  category: 'Pendants · 18k Yellow Gold',
+  image: '/images/pendant-collection-17.jpeg',
+  imageAlt: '/images/pendant-collection-17.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'pendant-18',
+  name: 'Majestic Rose Gold Motif Pendant',
+  category: 'Pendants · 18k White Gold',
+  image: '/images/pendant-collection-18.jpeg',
+  imageAlt: '/images/pendant-collection-18.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'pendant-19',
+  name: 'Classic Rose Gold Pendant',
+  category: 'Pendants · 18k White Gold',
+  image: '/images/pendant-collection-19.jpeg',
+  imageAlt: '/images/pendant-collection-19.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+}
+,
+  {
+  id: 'earring-v2-1',
+  name: 'Brilliant Yellow Gold Hoops',
+  category: 'Earrings · 18k Yellow Gold',
+  image: '/images/earring-collection-v2-1.png',
+  imageAlt: '/images/earring-collection-v2-1.png',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'earring-v2-2',
+  name: 'Opulent Rose Gold Hoops',
+  category: 'Earrings · 18k White Gold',
+  image: '/images/earring-collection-v2-2.png',
+  imageAlt: '/images/earring-collection-v2-2.png',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'earring-v2-3',
+  name: 'Statement Yellow Gold Drop Earrings',
+  category: 'Earrings · 18k Yellow Gold',
+  image: '/images/earring-collection-v2-3.png',
+  imageAlt: '/images/earring-collection-v2-3.png',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'earring-v2-4',
+  name: 'Ornate Rose Gold Drop Earrings',
+  category: 'Earrings · 18k Yellow Gold',
+  image: '/images/earring-collection-v2-4.png',
+  imageAlt: '/images/earring-collection-v2-4.png',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'earring-v2-5',
+  name: 'Luxury Rose Gold Chandelier Earrings',
+  category: 'Earrings · 18k Yellow Gold',
+  image: '/images/earring-collection-v2-5.png',
+  imageAlt: '/images/earring-collection-v2-5.png',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'earring-v2-6',
+  name: 'Sparkling White Gold Chandelier Earrings',
+  category: 'Earrings · 18k Yellow Gold',
+  image: '/images/earring-collection-v2-6.png',
+  imageAlt: '/images/earring-collection-v2-6.png',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'earring-v2-7',
+  name: 'Exquisite White Gold Drop Earrings',
+  category: 'Earrings · 18k Yellow Gold',
+  image: '/images/earring-collection-v2-7.png',
+  imageAlt: '/images/earring-collection-v2-7.png',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'earring-v2-8',
+  name: 'Ornate White Gold Hoops',
+  category: 'Earrings · 18k Rose Gold',
+  image: '/images/earring-collection-v2-8.jpeg',
+  imageAlt: '/images/earring-collection-v2-8.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'earring-v2-9',
+  name: 'Dazzling White Gold Drop Earrings',
+  category: 'Earrings · 18k Rose Gold',
+  image: '/images/earring-collection-v2-9.jpeg',
+  imageAlt: '/images/earring-collection-v2-9.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+}
 ];
 
 export const TESTIMONIALS = [
