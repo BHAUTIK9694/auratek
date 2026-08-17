@@ -944,6 +944,97 @@ export const NEW_ARRIVALS = [
     '#E8E1D9'
   ]
 }
+,
+  {
+  id: 'necklace-v2-1',
+  name: 'Ornate Yellow Gold Collar',
+  category: 'Necklaces · 18k Rose Gold',
+  image: '/images/necklace-collection-v2-1.jpeg',
+  imageAlt: '/images/necklace-collection-v2-1.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'necklace-v2-2',
+  name: 'Statement Yellow Gold Layered Necklace',
+  category: 'Necklaces · 18k Yellow Gold',
+  image: '/images/necklace-collection-v2-2.jpeg',
+  imageAlt: '/images/necklace-collection-v2-2.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'necklace-v2-3',
+  name: 'Luxury Yellow Gold Choker',
+  category: 'Necklaces · 18k White Gold',
+  image: '/images/necklace-collection-v2-3.jpeg',
+  imageAlt: '/images/necklace-collection-v2-3.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'necklace-v2-4',
+  name: 'Ornate White Gold Layered Necklace',
+  category: 'Necklaces · 18k Rose Gold',
+  image: '/images/necklace-collection-v2-4.jpeg',
+  imageAlt: '/images/necklace-collection-v2-4.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'necklace-v2-5',
+  name: 'Ornate White Gold Necklace',
+  category: 'Necklaces · 18k White Gold',
+  image: '/images/necklace-collection-v2-5.jpeg',
+  imageAlt: '/images/necklace-collection-v2-5.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'necklace-v2-6',
+  name: 'Classic Rose Gold Choker',
+  category: 'Necklaces · 18k Rose Gold',
+  image: '/images/necklace-collection-v2-6.jpeg',
+  imageAlt: '/images/necklace-collection-v2-6.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'necklace-v2-7',
+  name: 'Luxury Yellow Gold Necklace',
+  category: 'Necklaces · 18k Rose Gold',
+  image: '/images/necklace-collection-v2-7.jpeg',
+  imageAlt: '/images/necklace-collection-v2-7.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'necklace-v2-8',
+  name: 'Classic Yellow Gold Choker',
+  category: 'Necklaces · 18k Rose Gold',
+  image: '/images/necklace-collection-v2-8.jpeg',
+  imageAlt: '/images/necklace-collection-v2-8.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+},
+  {
+  id: 'necklace-v2-9',
+  name: 'Opulent White Gold Choker',
+  category: 'Necklaces · 18k White Gold',
+  image: '/images/necklace-collection-v2-9.jpeg',
+  imageAlt: '/images/necklace-collection-v2-9.jpeg',
+  tones: [
+    '#E8E1D9'
+  ]
+}
 ];
 
 export const TESTIMONIALS = [
