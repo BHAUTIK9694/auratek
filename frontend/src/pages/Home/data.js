@@ -34,7 +34,7 @@ export const HERO_SLIDES = [
     ctaSecondary: { label: 'New Arrivals', to: '/new-arrivals' },
     image: '/images/celestial-muse.jpg',
     tag: 'Bestsellers',
-  },
+  }
 ];
 
 export const CATEGORIES = [
@@ -86,10 +86,83 @@ export const CATEGORIES = [
     image: '/images/vaddanam-3.png',
     to: '/collections?category=Vaddanam',
     size: 'md',
-  },
+  }
 ];
 
 export const NEW_ARRIVALS = [
+  {
+  id: 'ring-1',
+  name: 'Elegant Engagement Ring 1',
+  category: 'Rings · 18k White Gold',
+  image: '/images/ring-collection-1.jpeg',
+  imageAlt: '/images/ring-collection-1.jpeg',
+  tones: ['#E8E1D9']
+},
+  {
+  id: 'ring-2',
+  name: 'Elegant Engagement Ring 2',
+  category: 'Rings · 18k White Gold',
+  image: '/images/ring-collection-2.jpeg',
+  imageAlt: '/images/ring-collection-2.jpeg',
+  tones: ['#E8E1D9']
+},
+  {
+  id: 'ring-3',
+  name: 'Elegant Engagement Ring 3',
+  category: 'Rings · 18k White Gold',
+  image: '/images/ring-collection-3.jpeg',
+  imageAlt: '/images/ring-collection-3.jpeg',
+  tones: ['#E8E1D9']
+},
+  {
+  id: 'ring-5',
+  name: 'Elegant Engagement Ring 5',
+  category: 'Rings · 18k White Gold',
+  image: '/images/ring-collection-5.jpeg',
+  imageAlt: '/images/ring-collection-5.jpeg',
+  tones: ['#E8E1D9']
+},
+  {
+  id: 'ring-7',
+  name: 'Elegant Engagement Ring 7',
+  category: 'Rings · 18k White Gold',
+  image: '/images/ring-collection-7.jpeg',
+  imageAlt: '/images/ring-collection-7.jpeg',
+  tones: ['#E8E1D9']
+},
+  {
+  id: 'ring-10',
+  name: 'Elegant Engagement Ring 10',
+  category: 'Rings · 18k White Gold',
+  image: '/images/ring-collection-10.jpeg',
+  imageAlt: '/images/ring-collection-10.jpeg',
+  tones: ['#E8E1D9']
+},
+  {
+  id: 'ring-11',
+  name: 'Elegant Engagement Ring 11',
+  category: 'Rings · 18k White Gold',
+  image: '/images/ring-collection-11.jpeg',
+  imageAlt: '/images/ring-collection-11.jpeg',
+  tones: ['#E8E1D9']
+},
+  {
+  id: 'ring-12',
+  name: 'Elegant Engagement Ring 12',
+  category: 'Rings · 18k White Gold',
+  image: '/images/ring-collection-12.jpeg',
+  imageAlt: '/images/ring-collection-12.jpeg',
+  tones: ['#E8E1D9']
+},
+  {
+  id: 'ring-13',
+  name: 'Elegant Engagement Ring 13',
+  category: 'Rings · 18k White Gold',
+  image: '/images/ring-collection-13.jpeg',
+  imageAlt: '/images/ring-collection-13.jpeg',
+  tones: ['#E8E1D9']
+},
+
   {
   id: 'bridal-01',
   name: 'Antique Emerald Long Necklace Set',
@@ -1058,7 +1131,7 @@ export const TESTIMONIALS = [
     author: 'Meera N.',
     location: 'Delhi',
     piece: 'Celestial Muse Set',
-  },
+  }
 ];
 
 export const JOURNAL_POSTS = [];
@@ -1069,7 +1142,7 @@ export const INSTAGRAM_TILES = [
   '/images/earrings-category.jpg',
   '/images/bracelets-category.jpg',
   '/images/bridal-category.jpg',
-  '/images/layering-guide.jpg',
+  '/images/layering-guide.jpg'
 ];
 
 export const PRESS_LOGOS = [];
