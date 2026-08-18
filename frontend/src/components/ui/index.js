@@ -17,3 +17,4 @@ export { default as CategoryTile } from './CategoryTile';
 export { default as TrustBar } from './TrustBar';
 export { default as Newsletter } from './Newsletter';
 export { default as InquiryModal } from './InquiryModal';
+export { default as InitialLoader } from './InitialLoader';

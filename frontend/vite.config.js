@@ -23,8 +23,11 @@ export default defineConfig({
   },
   server: {
     proxy: {
+      // /api/contact.php and any other PHP files in public/api/ are served
+      // by XAMPP/Apache. During dev, Vite proxies /api/* to Apache.
+      // Make sure XAMPP is running before starting the dev server.
       '/api': {
-        target: 'http://localhost:8000',
+        target: 'http://localhost:80',
         changeOrigin: true,
       },
     },

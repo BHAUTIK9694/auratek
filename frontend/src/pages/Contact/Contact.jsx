@@ -2,26 +2,56 @@ import React, { useState } from 'react';
 import siteConfig from '@config/siteConfig';
 import styles from './Contact.module.css';
 
+const CONTACT_API = '/api/contact.php';
+
 const Contact = () => {
   const { contact, address, hours, social } = siteConfig;
 
   const [form, setForm] = useState({ name: '', email: '', phone: '', subject: '', message: '' });
   const [status, setStatus] = useState('idle'); // idle | submitting | success | error
+  const [serverError, setServerError] = useState('');
+  const [fieldErrors, setFieldErrors] = useState({});
 
   const handleChange = (e) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    // Clear field-level error on change
+    if (fieldErrors[e.target.name]) {
+      setFieldErrors((prev) => ({ ...prev, [e.target.name]: '' }));
+    }
     if (status === 'error') setStatus('idle');
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!form.name || !form.email || !form.message) {
       setStatus('error');
+      setServerError('Please fill in all required fields (name, email, message).');
       return;
     }
     setStatus('submitting');
-    // Simulated submission — wire to backend when available
-    window.setTimeout(() => setStatus('success'), 1200);
+    setServerError('');
+    setFieldErrors({});
+
+    try {
+      const res = await fetch(CONTACT_API, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+
+      const json = await res.json();
+
+      if (json.success) {
+        setStatus('success');
+      } else {
+        setStatus('error');
+        setServerError(json.message || 'Something went wrong. Please try again.');
+        if (json.errors) setFieldErrors(json.errors);
+      }
+    } catch {
+      setStatus('error');
+      setServerError('Network error. Please check your connection and try again.');
+    }
   };
 
   const whatsappMessage = encodeURIComponent(
@@ -140,9 +170,10 @@ const Contact = () => {
                         value={form.name}
                         onChange={handleChange}
                         placeholder="Your full name"
-                        className={styles.input}
+                        className={`${styles.input}${fieldErrors.name ? ' ' + styles.inputError : ''}`}
                         required
                       />
+                      {fieldErrors.name && <span className={styles.fieldError}>{fieldErrors.name}</span>}
                     </label>
                     <label className={styles.field}>
                       <span className={styles.fieldLabel}>Email Address *</span>
@@ -153,9 +184,10 @@ const Contact = () => {
                         onChange={handleChange}
                         placeholder="your@email.com"
                         autoComplete="email"
-                        className={styles.input}
+                        className={`${styles.input}${fieldErrors.email ? ' ' + styles.inputError : ''}`}
                         required
                       />
+                      {fieldErrors.email && <span className={styles.fieldError}>{fieldErrors.email}</span>}
                     </label>
                   </div>
 
@@ -169,8 +201,9 @@ const Contact = () => {
                         onChange={handleChange}
                         placeholder="+91 00000 00000"
                         autoComplete="tel"
-                        className={styles.input}
+                        className={`${styles.input}${fieldErrors.phone ? ' ' + styles.inputError : ''}`}
                       />
+                      {fieldErrors.phone && <span className={styles.fieldError}>{fieldErrors.phone}</span>}
                     </label>
                     <label className={styles.field}>
                       <span className={styles.fieldLabel}>Subject</span>
@@ -193,14 +226,15 @@ const Contact = () => {
                       onChange={handleChange}
                       placeholder="Tell us how we can help..."
                       rows={5}
-                      className={`${styles.input} ${styles.textarea}`}
+                      className={`${styles.input} ${styles.textarea}${fieldErrors.message ? ' ' + styles.inputError : ''}`}
                       required
                     />
+                    {fieldErrors.message && <span className={styles.fieldError}>{fieldErrors.message}</span>}
                   </label>
 
                   {status === 'error' && (
                     <p className={styles.errorMsg} role="alert">
-                      Please fill in all required fields (name, email, message).
+                      {serverError || 'Please fill in all required fields (name, email, message).'}
                     </p>
                   )}
 

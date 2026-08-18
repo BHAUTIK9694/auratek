@@ -273,6 +273,19 @@
   margin: 0;
 }
 
+.inputError {
+  border-color: #c44 !important;
+  box-shadow: 0 0 0 3px rgba(204, 68, 68, 0.1) !important;
+}
+
+.fieldError {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: #c44;
+  margin-top: var(--space-1);
+  display: block;
+}
+
 .submitBtn {
   display: inline-flex;
   align-items: center;

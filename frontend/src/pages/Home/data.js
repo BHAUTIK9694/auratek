@@ -69,7 +69,7 @@ export const CATEGORIES = [
   {
     title: 'Bracelets',
     subtitle: 'Tennis · Cuffs · Bangles',
-    image: '/images/bracelet-collection-1.jpeg',
+    image: '/images/bracelet-client-1.jpeg',
     to: '/collections?category=Bracelets',
     size: 'md',
   },
@@ -627,115 +627,108 @@ export const NEW_ARRIVALS = [
 ,
   {
   id: 'bracelet-1',
-  name: 'Royal Yellow Gold Cuff',
-  category: 'Bracelets · Platinum',
-  image: '/images/bracelet-collection-1.jpeg',
-  imageAlt: '/images/bracelet-collection-1.jpeg',
-  tones: [
-    '#E8E1D9'
-  ]
+  name: 'Auratek Bracelet 01',
+  category: 'Bracelets · Fine Jewelry',
+  image: '/images/bracelet-client-1.jpeg',
+  imageAlt: 'Auratek bracelet 01',
+  tones: ['#E8E1D9']
 },
   {
   id: 'bracelet-2',
-  name: 'Eternity Rose Gold Bangle',
-  category: 'Bracelets · 18k Yellow Gold',
-  image: '/images/bracelet-collection-2.jpeg',
-  imageAlt: '/images/bracelet-collection-2.jpeg',
-  tones: [
-    '#E8E1D9'
-  ]
+  name: 'Auratek Bracelet 02',
+  category: 'Bracelets · Fine Jewelry',
+  image: '/images/bracelet-client-2.jpeg',
+  imageAlt: 'Auratek bracelet 02',
+  tones: ['#E8E1D9']
 },
   {
   id: 'bracelet-3',
-  name: 'Eternity Diamond Cuff',
-  category: 'Bracelets · 18k White Gold',
-  image: '/images/bracelet-collection-3.jpeg',
-  imageAlt: '/images/bracelet-collection-3.jpeg',
-  tones: [
-    '#E8E1D9'
-  ]
+  name: 'Auratek Bracelet 03',
+  category: 'Bracelets · Fine Jewelry',
+  image: '/images/bracelet-client-3.jpeg',
+  imageAlt: 'Auratek bracelet 03',
+  tones: ['#E8E1D9']
 },
   {
   id: 'bracelet-4',
-  name: 'Classic Yellow Gold Cuff',
-  category: 'Bracelets · 18k Rose Gold',
-  image: '/images/bracelet-collection-4.jpeg',
-  imageAlt: '/images/bracelet-collection-4.jpeg',
-  tones: [
-    '#E8E1D9'
-  ]
+  name: 'Auratek Bracelet 04',
+  category: 'Bracelets · Fine Jewelry',
+  image: '/images/bracelet-client-4.jpeg',
+  imageAlt: 'Auratek bracelet 04',
+  tones: ['#E8E1D9']
 },
   {
   id: 'bracelet-5',
-  name: 'Signature Rose Gold Bangle',
-  category: 'Bracelets · 18k Yellow Gold',
-  image: '/images/bracelet-collection-5.jpeg',
-  imageAlt: '/images/bracelet-collection-5.jpeg',
-  tones: [
-    '#E8E1D9'
-  ]
+  name: 'Auratek Bracelet 05',
+  category: 'Bracelets · Fine Jewelry',
+  image: '/images/bracelet-client-5.jpeg',
+  imageAlt: 'Auratek bracelet 05',
+  tones: ['#E8E1D9']
 },
   {
   id: 'bracelet-6',
-  name: 'Halo Diamond Bangle',
-  category: 'Bracelets · 18k Yellow Gold',
-  image: '/images/bracelet-collection-6.jpeg',
-  imageAlt: '/images/bracelet-collection-6.jpeg',
-  tones: [
-    '#E8E1D9'
-  ]
+  name: 'Auratek Bracelet 06',
+  category: 'Bracelets · Fine Jewelry',
+  image: '/images/bracelet-client-6.jpeg',
+  imageAlt: 'Auratek bracelet 06',
+  tones: ['#E8E1D9']
 },
   {
   id: 'bracelet-7',
-  name: 'Royal White Gold Cuff',
-  category: 'Bracelets · 18k Yellow Gold',
-  image: '/images/bracelet-collection-7.jpeg',
-  imageAlt: '/images/bracelet-collection-7.jpeg',
-  tones: [
-    '#E8E1D9'
-  ]
+  name: 'Auratek Bracelet 07',
+  category: 'Bracelets · Fine Jewelry',
+  image: '/images/bracelet-client-7.jpeg',
+  imageAlt: 'Auratek bracelet 07',
+  tones: ['#E8E1D9']
 },
   {
   id: 'bracelet-8',
-  name: 'Signature Diamond Tennis Bracelet',
-  category: 'Bracelets · 18k Yellow Gold',
-  image: '/images/bracelet-collection-8.jpeg',
-  imageAlt: '/images/bracelet-collection-8.jpeg',
-  tones: [
-    '#E8E1D9'
-  ]
+  name: 'Auratek Bracelet 08',
+  category: 'Bracelets · Fine Jewelry',
+  image: '/images/bracelet-client-8.jpeg',
+  imageAlt: 'Auratek bracelet 08',
+  tones: ['#E8E1D9']
 },
   {
   id: 'bracelet-9',
-  name: 'Infinity Rose Gold Bangle',
-  category: 'Bracelets · 18k Rose Gold',
-  image: '/images/bracelet-collection-9.jpeg',
-  imageAlt: '/images/bracelet-collection-9.jpeg',
-  tones: [
-    '#E8E1D9'
-  ]
+  name: 'Auratek Bracelet 09',
+  category: 'Bracelets · Fine Jewelry',
+  image: '/images/bracelet-client-9.jpeg',
+  imageAlt: 'Auratek bracelet 09',
+  tones: ['#E8E1D9']
 },
   {
   id: 'bracelet-10',
-  name: 'Infinity Yellow Gold Tennis Bracelet',
-  category: 'Bracelets · 18k White Gold',
-  image: '/images/bracelet-collection-10.jpeg',
-  imageAlt: '/images/bracelet-collection-10.jpeg',
-  tones: [
-    '#E8E1D9'
-  ]
+  name: 'Auratek Bracelet 10',
+  category: 'Bracelets · Fine Jewelry',
+  image: '/images/bracelet-client-10.jpeg',
+  imageAlt: 'Auratek bracelet 10',
+  tones: ['#E8E1D9']
 },
   {
   id: 'bracelet-11',
-  name: 'Infinity Diamond Tennis Bracelet',
-  category: 'Bracelets · 18k White Gold',
-  image: '/images/bracelet-collection-11.jpeg',
-  imageAlt: '/images/bracelet-collection-11.jpeg',
-  tones: [
-    '#E8E1D9'
-  ]
-}
-,
+  name: 'Auratek Bracelet 11',
+  category: 'Bracelets · Fine Jewelry',
+  image: '/images/bracelet-client-11.jpeg',
+  imageAlt: 'Auratek bracelet 11',
+  tones: ['#E8E1D9']
+},
+  {
+  id: 'bracelet-12',
+  name: 'Auratek Bracelet 12',
+  category: 'Bracelets · Fine Jewelry',
+  image: '/images/bracelet-client-12.jpeg',
+  imageAlt: 'Auratek bracelet 12',
+  tones: ['#E8E1D9']
+},
+  {
+  id: 'bracelet-13',
+  name: 'Auratek Bracelet 13',
+  category: 'Bracelets · Fine Jewelry',
+  image: '/images/bracelet-client-13.jpeg',
+  imageAlt: 'Auratek bracelet 13',
+  tones: ['#E8E1D9']
+},
   {
   id: 'pendant-1',
   name: 'Signature Sapphire Motif Pendant',
