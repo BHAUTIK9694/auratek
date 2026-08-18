@@ -39,10 +39,10 @@ const siteConfig = {
   },
 
   social: {
-    instagram: 'https://instagram.com/auratek',
-    pinterest: 'https://pinterest.com/auratek',
-    facebook: 'https://facebook.com/auratek',
-    youtube: 'https://youtube.com/auratek',
+    instagram: 'https://www.instagram.com/auratekjewels/',
+    pinterest: '',
+    facebook: '',
+    youtube: '',
   },
 };
 

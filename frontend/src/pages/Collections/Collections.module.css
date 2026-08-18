@@ -98,43 +98,46 @@
 
 /* Filters */
 .filters {
-  position: sticky;
-  top: calc(var(--header-height) + var(--announcement-height) + var(--space-4));
-  z-index: 50;
-  display: flex;
-  align-items: center;
-  gap: var(--space-5);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
+  align-items: stretch;
   margin-bottom: var(--space-10);
-  padding: var(--space-5) var(--space-6);
+  padding: var(--space-4);
   background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(201, 169, 110, 0.12);
   border-radius: var(--radius-lg);
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
-  flex-wrap: wrap;
 }
 
-.filterGroup {
+.filterField {
   display: flex;
   align-items: center;
   gap: var(--space-3);
+  min-width: 0;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: var(--radius-full);
+  background: rgba(248, 246, 243, 0.9);
 }
 
 .filterIcon {
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: var(--radius-full);
   background: rgba(201, 169, 110, 0.08);
   color: var(--color-brand-primary);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   flex-shrink: 0;
 }
 
 .filterLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
   font-family: var(--font-body);
   font-size: 0.68rem;
   font-weight: var(--weight-semibold);
@@ -144,79 +147,44 @@
   white-space: nowrap;
 }
 
-.filterChips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
+.customSelect {
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
-.chip {
-  padding: 8px 16px;
-  font-family: var(--font-body);
-  font-size: 0.72rem;
-  font-weight: var(--weight-medium);
-  letter-spacing: var(--tracking-wide);
-  color: var(--text-secondary);
-  background: var(--color-off-white);
-  border: 1px solid transparent;
-  border-radius: var(--radius-full);
-  cursor: pointer;
-  transition:
-    background var(--transition-base),
-    color var(--transition-base),
-    border-color var(--transition-base),
-    transform var(--transition-base),
-    box-shadow var(--transition-base);
+.customSelect::after {
+  content: "";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid rgba(15, 15, 15, 0.65);
+  border-bottom: 2px solid rgba(15, 15, 15, 0.65);
+  transform: translateY(-70%) rotate(45deg);
+  pointer-events: none;
 }
 
-.chip:hover {
-  background: rgba(201, 169, 110, 0.08);
-  border-color: rgba(201, 169, 110, 0.3);
-  color: var(--color-brand-primary);
-  transform: translateY(-1px);
-}
-
-.chipActive {
-  background: var(--color-brand-primary);
-  border-color: var(--color-brand-primary);
-  color: var(--color-white);
-  box-shadow: 0 4px 12px rgba(201, 169, 110, 0.3);
-}
-
-.chipActive:hover {
-  background: var(--color-brand-secondary);
-  border-color: var(--color-brand-secondary);
-  color: var(--color-white);
-}
-
-.filterDivider {
-  width: 1px;
-  height: 28px;
-  background: rgba(0, 0, 0, 0.08);
-  flex-shrink: 0;
-}
-
-.sortSelect {
-  padding: 8px 16px;
+.selectInput {
+  width: 100%;
+  min-width: 0;
+  padding: 10px 36px 10px 14px;
   font-family: var(--font-body);
   font-size: 0.72rem;
   font-weight: var(--weight-medium);
   color: var(--text-primary);
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: var(--radius-full);
-  background: var(--color-off-white);
+  background: var(--color-white);
   cursor: pointer;
-  transition:
-    border-color var(--transition-base),
-    box-shadow var(--transition-base);
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
   appearance: none;
-  padding-right: 32px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 12px center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
-.sortSelect:focus {
+.selectInput:focus {
   outline: none;
   border-color: var(--color-brand-primary);
   box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.1);

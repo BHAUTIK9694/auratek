@@ -18,7 +18,7 @@ const Instagram = () => {
           <span className={styles.eyebrowLine} />
         </p>
         <h2 id="ig-heading" className={styles.title}>
-          <span className={styles.handle}>@auratek</span>
+          <span className={styles.handle}>@auratekjewels</span>
         </h2>
         <p className={styles.subtitle}>
           Behind the scenes at our ateliers, on-set stories, and glimpses of
@@ -30,7 +30,7 @@ const Instagram = () => {
         {INSTAGRAM_TILES.map((src, i) => (
           <li key={src} className={`${styles.item} reveal reveal--delay-${(i % 5) + 1}`}>
             <a
-              href="https://instagram.com/auratek"
+              href="https://www.instagram.com/auratekjewels/"
               className={styles.tile}
               target="_blank"
               rel="noopener noreferrer"
@@ -51,7 +51,7 @@ const Instagram = () => {
 
       <div className={styles.footer}>
         <a
-          href="https://instagram.com/auratek"
+          href="https://www.instagram.com/auratekjewels/"
           className={styles.followBtn}
           target="_blank"
           rel="noopener noreferrer"
@@ -61,7 +61,7 @@ const Instagram = () => {
             <circle cx="12" cy="12" r="4.5" />
             <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none" />
           </svg>
-          <span>Follow @auratek</span>
+          <span>Follow @auratekjewels</span>
         </a>
       </div>
     </section>

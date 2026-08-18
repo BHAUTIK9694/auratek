@@ -10,7 +10,10 @@ import {
   Rings,
   Necklaces,
   Earrings,
+  Bracelets,
+  Pendants,
   Bridal,
+  Vaddanam,
   CraftsmanshipPage,
   NewArrivalsPage,
   Wedding,
@@ -36,7 +39,9 @@ const App = () => {
           <Route path="/rings" element={<Rings />} />
           <Route path="/necklaces" element={<Necklaces />} />
           <Route path="/earrings" element={<Earrings />} />
-          <Route path="/bracelets" element={<ComingSoon title="Bracelets" subtitle="Tennis · Cuffs · Bangles" description="Elegant bracelets that move with you — coming soon." />} />
+          <Route path="/bracelets" element={<Bracelets />} />
+          <Route path="/pendants" element={<Pendants />} />
+          <Route path="/vaddanam" element={<Vaddanam />} />
           <Route path="/bridal" element={<Bridal />} />
           <Route path="/mens" element={<ComingSoon title="Men's Collection" subtitle="Signet Rings · Chains · Cufflinks" description="Modern jewelry for the discerning man — coming soon." />} />
           <Route path="/new-arrivals" element={<NewArrivalsPage />} />

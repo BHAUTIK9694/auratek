@@ -272,17 +272,8 @@ const Contact = () => {
               <div className={styles.infoCard}>
                 <h3 className={styles.infoTitle}>Follow Us</h3>
                 <div className={styles.socials}>
-                  <a href={social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                  <a href="https://www.instagram.com/auratekjewels/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                     <i className="fa-brands fa-instagram"></i>
-                  </a>
-                  <a href={social.pinterest} target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
-                    <i className="fa-brands fa-pinterest-p"></i>
-                  </a>
-                  <a href={social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                    <i className="fa-brands fa-facebook-f"></i>
-                  </a>
-                  <a href={social.youtube} target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                    <i className="fa-brands fa-youtube"></i>
                   </a>
                 </div>
               </div>

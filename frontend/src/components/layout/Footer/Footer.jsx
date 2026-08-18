@@ -166,17 +166,8 @@ const Footer = () => {
             </div>
 
             <div className={styles.socials}>
-              <a href={siteConfig.social.instagram} className={styles.socialLink} aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/auratekjewels/" className={styles.socialLink} aria-label="Instagram" target="_blank" rel="noopener noreferrer">
                 <i className="fa-brands fa-instagram"></i>
-              </a>
-              <a href={siteConfig.social.pinterest} className={styles.socialLink} aria-label="Pinterest" target="_blank" rel="noopener noreferrer">
-                <i className="fa-brands fa-pinterest-p"></i>
-              </a>
-              <a href={siteConfig.social.facebook} className={styles.socialLink} aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-                <i className="fa-brands fa-facebook-f"></i>
-              </a>
-              <a href={siteConfig.social.youtube} className={styles.socialLink} aria-label="YouTube" target="_blank" rel="noopener noreferrer">
-                <i className="fa-brands fa-youtube"></i>
               </a>
             </div>
           </div>

@@ -13,9 +13,10 @@ const NAV = [
   { label: 'Rings', to: '/rings' },
   { label: 'Necklaces', to: '/necklaces' },
   { label: 'Earrings', to: '/earrings' },
-  { label: 'Bridal', to: '/bridal' },
-  { label: 'Craftsmanship', to: '/craftsmanship' },
-  { label: 'Contact', to: '/contact' },
+  { label: 'Bracelets', to: '/bracelets' },
+  { label: 'Pendants', to: '/pendants' },
+  { label: 'Bridal Sets', to: '/bridal' },
+  { label: 'Vaddanam / South Indian', to: '/vaddanam' },
 ];
 
 const Header = () => {

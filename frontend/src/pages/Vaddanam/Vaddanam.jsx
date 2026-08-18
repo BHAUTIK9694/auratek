@@ -1,16 +1,16 @@
 import React from 'react';
 import { ProductCard } from '@components/ui';
 import { NEW_ARRIVALS } from '@pages/Home/data';
-import styles from './Bridal.module.css';
+import styles from '@pages/Rings/Rings.module.css';
 
-const Bridal = () => {
-  const products = NEW_ARRIVALS.filter((p) => p.category.includes('Bridal'));
+const Vaddanam = () => {
+  const products = NEW_ARRIVALS.filter((p) => p.category.includes('Vaddanam'));
 
   return (
     <main className={styles.page}>
       <section className={styles.hero}>
         <div className={styles.heroMedia} aria-hidden="true">
-          <img src="/images/bridal-category.jpg" alt="" />
+          <img src="/images/vaddanam-1.png" alt="" />
           <div className={styles.heroVeil} />
         </div>
         <div className={styles.heroContent}>
@@ -19,15 +19,17 @@ const Bridal = () => {
             Shop
             <span className={styles.eyebrowLine} />
           </p>
-          <h1 className={styles.title}><em>Bridal</em></h1>
-          <p className={styles.subtitle}>Engagement · Anniversary · Gifting</p>
+          <h1 className={styles.title}><em>Vaddanam</em></h1>
+          <p className={styles.subtitle}>
+            Traditional · Exquisite
+          </p>
         </div>
       </section>
 
       <section className={styles.productsSection}>
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
-            <h2 className={styles.sectionTitle}>Bridal Collection</h2>
+            <h2 className={styles.sectionTitle}>All Vaddanam</h2>
             <span className={styles.productCount}>{products.length} pieces</span>
           </div>
           <div className={styles.grid}>
@@ -41,4 +43,4 @@ const Bridal = () => {
   );
 };
 
-export default Bridal;
+export default Vaddanam;
